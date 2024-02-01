@@ -32,3 +32,30 @@ EVENT ---> RUNNER1 ---> RUNNER2
         - to run a schedule, by posting to a REST API
         - or, manually
     
+**Jobs**
+     - set of steps in a workflow executed on the same runner 
+     - each step is 
+          - either shell script taht will be executed
+          - or an action that will be run 
+     - each step is independent of another and run independently
+     - data sharing is possile as all steps run on same runner 
+     - job's dependencies can be configured with other jobs 
+          - by default, jobs have no dependencies and run in parallel with each other
+          - When a job takes a dependency on another job, it will wait for the dependent job to complete before it can run.
+    
+**Actions**
+     - a custom application for github actions platform 
+     - it performs a complex but frequently repeated task
+     - used to reduce the amount of repetitive code that we write in workflow files.
+     - An action can pull your git repository from GitHub, set up the correct toolchain for your build environment, or set up the authentication to your cloud provider.
+     - You can write your own actions, or you can find actions to use in your workflows in the GitHub Marketplace.
+
+**Runners**
+     - it is a server that runs your workflows when they're triggered
+     - each runner can run a single job at a time 
+     - GitHub provides Ubuntu Linux, Microsoft Windows, and macOS runners to run workflows
+     - each workflow run executes
+          - in a newly provisioned,
+          - fresh VM
+    
+          
