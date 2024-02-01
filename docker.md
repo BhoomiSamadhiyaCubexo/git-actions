@@ -70,7 +70,7 @@ When you're ready, deploy your application into your production environment, as 
    - a container is relatively well isolated from other containers and its host machine.
    - When a container is removed, any changes to its state that aren't stored in persistent storage disappear.
 
-    **docker run -i -t [imagename] /bin/bash** 
+    docker run -i -t [imagename] /bin/bash
 
    - A container is an isolated environment for your code.
    - This means that a container has no knowledge of your operating system, or your files.
